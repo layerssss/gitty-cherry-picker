@@ -1,0 +1,35 @@
+{
+  "name": "gitty-cherry-picker",
+  "version": "1.0.2",
+  "description": "A git runner that `cherry-pick`s branches for you.",
+  "scripts": {
+    "start": "node bin/gcpd.js",
+    "dev": "nodemon --watch lib --watch bin/gcpd.js bin/gcpd.js"
+  },
+  "bin": {
+    "gcpd": "bin/gcpd.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/layerssss/gitty-cherry-picker.git"
+  },
+  "author": "Michael Yin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/layerssss/gitty-cherry-picker/issues"
+  },
+  "homepage": "https://github.com/layerssss/gitty-cherry-picker#readme",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "express": "^4.15.2",
+    "lodash": "^4.17.4",
+    "node-pty": "^0.6.3",
+    "rimraf": "^2.6.1",
+    "simple-git": "^1.70.0",
+    "uuid": "^3.0.1",
+    "ws": "^2.2.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
