@@ -1,6 +1,6 @@
 {
   "name": "gitty-cherry-picker",
-  "version": "1.0.4",
+  "version": "1.0.8",
   "description": "A git runner that `cherry-pick`s branches for you.",
   "scripts": {
     "start": "node bin/gcpd.js",
@@ -25,6 +25,7 @@
     "lodash": "^4.17.4",
     "node-pty": "^0.6.3",
     "rimraf": "^2.6.1",
+    "shell-quote": "^1.6.1",
     "simple-git": "^1.70.0",
     "uuid": "^3.0.1",
     "ws": "^2.2.3"
