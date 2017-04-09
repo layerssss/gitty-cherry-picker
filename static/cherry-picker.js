@@ -180,7 +180,12 @@ class CherryPicker extends React.Component {
                         ListGroup, {
                           fill: true
                         },
-                        this.state.branches.filter(b => b.active).map(branch =>
+                        this.state.branches.filter(b => {
+                          var cs = b.commits.filter(c =>
+                            _.find(this.state.targetBranch.commits, cc => cc.hash == c.hash)
+                          );
+                          return cs.length && cs.length == b.commits.length;
+                        }).map(branch =>
                           createElement(
                             ListGroupItem, {},
                             branch.name
