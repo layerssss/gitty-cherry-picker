@@ -196,7 +196,7 @@ class CherryPicker extends React.Component {
                   title: 'All branches',
                   eventKey: 2
                 },
-                this.state.branches.map(branch =>
+                this.state.branches.filter(b => b.commits.length).map(branch =>
                   createElement(
                     Panel, {
                       header: branch.name,
