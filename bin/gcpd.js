@@ -12,10 +12,9 @@ var Express = require('express');
 Commander.version(require(Path.join(__dirname, '..', 'package.json')).version)
     .option('-p, --port [integer]', 'HTTP port', ((i, d) => parseInt(i || d)), process.env['PORT'] || 3000)
     .option('    --bind [string]', 'HTTP bind', '127.0.0.1')
-    .option('-g, --git [string]', 'git repo directory')
+    .option('-g, --git [string]', 'git url')
     .option('-b, --branch [string]', 'target git branch')
     .option('    --base-branch [string]', 'base git branch', 'master')
-    .option('    --remote [string]', 'git remote', 'origin')
     .option('    --run-command [string]', 'command to run after pushing back to remote')
     .parse(process.argv);
 
